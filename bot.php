@@ -37,6 +37,8 @@ if (!is_null($events['events'])) {
 				$uid = $event['source']['userId'];
 			}
 
+			$uid .= 'type : ' . $event['source']['type'];
+
 			$replyMessage = [
 				'type' => 'text',
 				'text' => 'uid : ' . $uid

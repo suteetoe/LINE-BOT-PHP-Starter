@@ -1,5 +1,9 @@
 <?php
 
+/*
+1. if send message register keep userId to client
+*/
+
 $access_token = "LhJ5HCtMecci0Lb/Sj9Z2PIy1+Fb8UR+UdR6sZJGyVkzZqWGmlBcu/wtM3jncoJZXM3mhBmX8qR2wkBDFdA4DiCTGWyXNYeLnwHdp8c2V93WSlHVWEkyiruDRgLpDh/Rky3FVaT7yDsAwdTsllghqAdB04t89/1O/w1cDnyilFU=";
 
 
@@ -26,7 +30,7 @@ if (!is_null($events['events'])) {
 
 			$replyMessage = [
 				'type' => 'text',
-				'text' => 'uid : ' . $event['source']['userId']
+				'text' => 'uid : ' . isset($event['source']['groupId']) ? $event['source']['groupId'] : $event['source']['userId'];
 				];
 
 			// Make a POST Request to Messaging API to reply to sender

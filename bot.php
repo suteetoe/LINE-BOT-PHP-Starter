@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 
 			$replyMessage = [
 				'type' => 'text',
-				'text' => 'uid : ' . isset($event['source']['groupId']) ? $event['source']['groupId'] : $event['source']['userId'];
+				'text' => 'uid : ' .  (($event['source']['type']=='group') ? $event['source']['groupId'] : $event['source']['userId']);
 				];
 
 			// Make a POST Request to Messaging API to reply to sender

@@ -28,9 +28,17 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
+			$uid = '';
+			if ($event['source']['type']=='group') {
+				$uid = $event['source']['groupId'];
+			}
+			else {
+				$uid = $event['source']['userId'];
+			}
+
 			$replyMessage = [
 				'type' => 'text',
-				'text' => 'uid : ' .  (($event['source']['type']=='group') ? $event['source']['groupId'] : $event['source']['userId']);
+				'text' => 'uid : ' . $uid;
 				];
 
 			// Make a POST Request to Messaging API to reply to sender

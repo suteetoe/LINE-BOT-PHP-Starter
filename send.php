@@ -10,11 +10,14 @@ $headers = array('Authorization: Bearer ' . $access_token);
 
 $Uid = "U2188b7a5c3c13500da732de0fd132835";
 
-$message = 'วงเงินเครดิต xx บาท';
+$messageSend = [
+'type' => 'text',
+'text' => 'วงเงินเครดิต xx บาท'
+];
 
 $data = [
-'replyToken' => $replyToken,
-'messages' => [$replyMessage],
+'to' => $Uid,
+'messages' => [$messageSend],
 ];
 
 			$post = json_encode($data);
@@ -30,3 +33,4 @@ $data = [
 			curl_close($ch);
 
 			echo $result . "\r\n";
+

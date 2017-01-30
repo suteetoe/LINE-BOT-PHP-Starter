@@ -32,6 +32,9 @@ if (!is_null($events['events'])) {
 			if ($event['source']['type']=='group') {
 				$uid = $event['source']['groupId'];
 			}
+			else if ($event['source']['type']=='room') {
+				$uid = $event['source']['roomId'];
+			}
 			else 
 				{
 				$uid = $event['source']['userId'];

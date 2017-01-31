@@ -8,10 +8,7 @@ $url = 'https://api.line.me/v2/bot/message/push';
 $headers = array('Authorization: Bearer ' . $access_token);
 
 
-$Uid = [
-"C22d30228c5352a5709bc1725d54d8a0f",
-"U085e99fa163271339d4ec5028d5731be"
-];
+$Uid ="U3dbd1ecd7a3646db6c464f6fb750c3da";
 
 //"C22d30228c5352a5709bc1725d54d8a0f"; // test 
 
@@ -25,10 +22,7 @@ $messageSend = [
 ];
 
 $data = [
-'to' => [
-"C22d30228c5352a5709bc1725d54d8a0f",
-"U085e99fa163271339d4ec5028d5731be"
-],
+'to' => $Uid,
 'messages' => [$messageSend],
 ];
 

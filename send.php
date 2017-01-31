@@ -25,7 +25,10 @@ $messageSend = [
 ];
 
 $data = [
-'to' => $Uid,
+'to' => [
+"C22d30228c5352a5709bc1725d54d8a0f",
+"U085e99fa163271339d4ec5028d5731be"
+],
 'messages' => [$messageSend],
 ];
 

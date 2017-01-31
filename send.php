@@ -8,7 +8,12 @@ $url = 'https://api.line.me/v2/bot/message/push';
 $headers = array('Authorization: Bearer ' . $access_token);
 
 
-$Uid = "C22d30228c5352a5709bc1725d54d8a0f"; // test 
+$Uid = [
+"C22d30228c5352a5709bc1725d54d8a0f",
+"U085e99fa163271339d4ec5028d5731be"
+];
+
+//"C22d30228c5352a5709bc1725d54d8a0f"; // test 
 
 //"U085e99fa163271339d4ec5028d5731be"; // วิรุณ
 //"C82211a2fb3cab06d4ae62f203ed8bd67";
